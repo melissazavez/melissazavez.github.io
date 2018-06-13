@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Set height of body and the document to 100% */
+body, html {
+
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #777;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 19px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+
+.tab { margin-left: 40px; }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#home {background-color: skyblue;}
+#coursework {background-color: orange;}
+#workexperience {background-color: tomato;}
+#pastprojects {background-color: darkmagenta;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('home', this, 'skyblue')"id = "defaultOpen">home</button>
+<button class="tablink" onclick="openPage('coursework', this, 'orange')">coursework</button>
+<button class="tablink" onclick="openPage('workexperience', this, 'tomato')">work experience</button>
+<button class="tablink" onclick="openPage('pastprojects', this, 'darkmagenta')">past projects</button>
+
+<div id="home" class="tabcontent">
+  <h2 style="text-align:center;">Melissa Zavez</h2>
+  <p style="text-align:center;"> email: mzavez1@swarthmore.edu </p>
+  <p style="text-align:center;">Hello! I am currently a rising junior at Swarthmore College in PA. I am a
+    Computer Sicence major and a Statistics minor. This summer, I am working as a
+    research assistant on campus with the Math/Stat department. I made this website to both learn some HTML and
+    create a more in-depth version of my resume! :) (last updated 6/12/18)
+  </p>
+  <img src = "http://quotesnhumor.com/wp-content/uploads/2015/07/Top-30-Funny-Cat-Memes-Funny-memes.jpg" class="center">
+</div>
+
+<div id="coursework" class="tabcontent">
+  <h2 style="text-align:center;">relevant coursework</h2>
+  <div class="row">
+  <div class="column">
+    <ul>
+      <li><b>Introduction to Computer Science (Fall 2016)</b></li>
+      <ul>
+        <li> Description: learn the basics of computer science - for loops, if statements,
+          debugging, stack diagrams, object-oriented programming, some graphics</li>
+        <li>Skills Learned/Improved: Python, terminal</li>
+      </ul><br />
+
+      <li><b>Introduction to Computer Systems (Spring 2017)</b></li>
+      <ul>
+        <li> Description: learning how a computer works - binary operations, circuits,
+          assembly code, pointers, learning about the stack, the cache, OS, virtual memory,
+          synchronization, parallel and distributed computing</li>
+        <li> <a href="https://www.cs.swarthmore.edu/~mgagne1/teaching/2016_17/cs31/">Syllabus</a></li>
+        <li>Skills Learned/Improved: C++, GDB, Valgrind, Github, exposure to machine code(IA32)</li>
+        <li>Cool Projects: </li>
+        <ul>
+          <li>Maze Lab - go through machine code using GDB to solve five different
+            "levels" by figuring out what the program wants you to type</li>
+        </ul>
+      </ul><br />
+
+      <li><b>Data Structures and Algorithms (Fall 2017)</b></li>
+      <ul>
+        <li> Description: learning about stacks/queues, sorting, big-O notation, lists,
+          induction, (balanced) binary trees, priority queues, hash tables, graphs and
+          graph algorithms</li>
+        <li> <a href="https://www.cs.swarthmore.edu/courses/CS35/F17/">Syllabus</a></li>
+        <li>Skills Learned/Improved: C++, GDB, Github</li>
+        <li>Cool Projects: </li>
+        <ul>
+          <li>Railway Game - write a program that recreates the classic railway game, keeps
+            track of the information needed to play the game and updates the board</li>
+        </ul>
+      </ul><br />
+
+
+    </ul>
+  </div>
+  <div class="column" >
+    <ul>
+      <li><b>Computer Animation (Spring 2018)</b></li>
+      <ul>
+        <li>Description: use (mostly)math and (some)physics to create smooth animations</li>
+        <li> <a href="https://www.cs.swarthmore.edu/~alinen/cs91/s18/">Syllabus</a></li>
+        <li>Skills Learned/Improved: C++, GDB, matlab</li>
+        <li>Cool Projects: </li>
+        <ul>
+          <li>Project1: oaiwjef</li>
+        </ul>
+
+      </ul><br />
+
+      <li><b>Bioinformatics (Spring 2018)</b></li>
+      <ul>
+        <li> Description: learn different algorithms/procedures to analyze gentic data -
+          genome assembly, pairwise sequence alignment, Burrows-Wheeler transformation
+          and read mapping, phylogenetic trees, ancestral state reconstruction, Population Genetics,
+          Hidden Markov Models, Principal Component Analysis</li>
+        <li> <a href="https://www.cs.swarthmore.edu/~smathieson/teaching/s18/">Syllabus</a></li>
+        <li>Skills Learned/Improved: Python3</li>
+        <li>Cool Projects: </li>
+        <ul>
+          <li>Project1: oaiwjef</li>
+        </ul>
+      </ul><br />
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div id="workexperience" class="tabcontent">
+  <h2 style="text-align:center;">work experience</h2>
+
+
+  <div class="row">
+  <div class="column">
+    <ul>
+      <li class="tab">Research Assistant - Department of Mathematics and Statistics
+        <br />Swarthmore College, Summer 2018</li>
+      <ul>
+        <ul>
+          <li>worked closely with professor Wang to develop </li>
+          <li>improved the __ from __ to __</li>
+        </ul>
+      </ul> <br />
+      <li class="tab">Student Academic Mentor
+        <br />Swarthmore College, Sophomore Year</li>
+      <ul>
+        <ul>
+          <li>Orientation leader, assisting freshmen with transition to
+            academic and social environment in college </li>
+          <li>Liaison with faculty and deans </li>
+          <li>Residential hall leader and academic mentor, helping residents
+            develop time management and organization skills,
+            study strategies and other academic skills</li>
+        </ul>
+      </ul> <br />
+      <li class="tab">Robot Engineering Intern - <a href="https://www.jibo.com/">Jibo</a>
+        <br />Boston, MA, Summer 2017</li>
+      <ul>
+        <ul>
+          <li>Assist with developing, designing and execution of tests on the robot</li>
+          <li>Responsible for data collection relating to computer vision and software development</li>
+        </ul>
+      </ul> <br />
+      <li class="tab">Math Department Teaching Assistant
+        <br />Swarthmore College, Fall 2018</li>
+      <ul>
+        <ul>
+          <li>responsible for attending class </li>
+          <li>responsible for holding weekly study sessions</li>
+        </ul>
+      </ul> <br />
+    </ul>
+
+
+  </div>
+  <div class="column">
+    <ul>
+      <li class="tab">Club Ice Hockey President
+        <br />Swarthmore College, Fall 2018 - Present</li>
+      <ul>
+        <ul>
+          <li>responsible for ___</li>
+          <li>need to ___</li>
+          <li>served as treasurer sophomore year</li>
+        </ul>
+      </ul><br />
+      <li class="tab">TOPSoccer Coordinator
+        <br />Swarthmore College, Spring 2017 - Present</li>
+      <ul>
+        <ul>
+          <li>responsible for ___</li>
+          <li>need to ___</li>
+          <li>served as treasurer sophomore year</li>
+        </ul>
+      </ul><br /><br />
+      <li class="tab">Other Interests/Activities
+        <br />Swarthmore College</li>
+      <ul>
+        <ul>
+          <li>Varsity Field Hockey</li>
+          <ul>
+            <li>DIII varsity collegiate field hockey team, competing in the
+              Centennial Conference</li>
+            <li>member of the team freshmen year</li>
+          </ul>
+          <li>Offbeat A Capella</li>
+          <ul>
+            <li>member of co-ed on-campus A Capella group</li>
+            <li>6hr a week commitment</li>
+            <li>Fall 2016 - Present</li>
+          </ul>
+          <li>SAT/Spanish tutor</li>
+        </ul>
+      </ul><br />
+  </ul>
+  </div>
+</div>
+</div>
+
+<div id="pastprojects" class="tabcontent">
+  <h3>past projects</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
