@@ -66,7 +66,7 @@ body {font-family: Arial;
     <p>Computer Sicence Major & Statistics Minor at Swarthmore College - mzavez1@swarthmore.edu</p>
   </div>
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+  <button class="tablinks" onclick="openCity(event, 'About Me')" id = "defaultOpen">About Me</button>
   <button class="tablinks" onclick="openCity(event, 'Coursework')">Coursework</button>
   <button class="tablinks" onclick="openCity(event, 'Work Experience')">Work Experience</button>
   <button class="tablinks" onclick="openCity(event, 'Past Projects')">Past Projects</button>
@@ -235,7 +235,10 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 </script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 </body>
 </html>
