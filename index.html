@@ -12,6 +12,11 @@ body {font-family: Arial;}
     text-align: center;
     background: white;
 }
+
+.table { border:1px solid black; padding:10px; width:400px; overflow:hidden; }
+.left { float:left; width:200px; }
+.right { float:right; width:200px;  }
+
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -66,6 +71,15 @@ body {font-family: Arial;}
 </div>
 
 <div id="Coursework" class="tabcontent">
+  <h2>With Div</h2>
+  <div class="table">
+    <div class="left">
+        Content of the first column.
+    </div>
+    <div class="right">
+       Content of the second column.
+    </div>
+</div>
   <h3>Coursework</h3>
   <p>Hello! </p>
 </div>
